@@ -1,0 +1,22 @@
+stages:
+    - crate branch
+    - build deps
+    - build status
+    
+start:
+    stage: crate branch
+    script:
+    - "true"
+    only:
+        refs:
+            - merge_requests
+
+middle:
+    stage: build deps
+    script:
+    - "true"
+    
+end:
+    stage: build status
+    script:
+    - "true"
